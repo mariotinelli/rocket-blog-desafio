@@ -52,6 +52,7 @@ export const Input = styled.input`
 export const Button = styled.button`
     width: 4.375rem;
     border: none;
+    cursor: pointer;
     background-color: var(--button-bg);
 `;
 

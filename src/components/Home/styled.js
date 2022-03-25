@@ -11,7 +11,7 @@ export const HomeComponent = styled.div`
 export const Section = styled.section`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 73.0713rem;
     margin-inline: auto;
 `;
