@@ -20,4 +20,10 @@ export const Text = styled.p`
 
 export const Arrow = styled.img.attrs({src: arrow})`
     margin-left: 0.5rem;
+    
+    &:hover {
+        cursor: pointer;
+        transition: .5s;
+        transform: scale(1.5, 1.5);
+    }
 `;

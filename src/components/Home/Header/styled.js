@@ -20,14 +20,19 @@ export const Navbar = styled.nav`
     display: flex;
     align-items: center;
     gap: 2rem;
-`;
 
-export const Link = styled.a`
-    color: var(--white);
-    font-size: var(--font-2);
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    text-decoration: none;
+    & .navlink {
+        color: var(--white);
+        font-size: var(--font-2);
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        padding-left: 0.1875rem;
+    }
+
+    & .navlink.active {
+        border-left: 3px solid var(--green);
+    }
 `;
 
 export const Search = styled.div`

@@ -1,5 +1,14 @@
 import React from 'react'
-import { Button, HeaderComponent, Input, Link, Logo, Navbar, Search, SearchIcon } from './styled';
+import { Button, HeaderComponent, Input, Logo, Navbar, Search, SearchIcon } from './styled';
+
+import { NavLink } from 'react-router-dom';
+
+const links = [
+    {name: "Home", to:"/"},
+    {name: "Sobre", to:"/sobre"},
+    {name: "Categorias", to:"/categorias"},
+    {name: "Contato", to:"/contato"},
+]
 
 const Header = () => (
 
@@ -8,10 +17,15 @@ const Header = () => (
         <HeaderComponent>
             <Logo />
             <Navbar>
-                <Link href="#"> Home </Link>
+                {links.map( (link) => (
+                    <NavLink className="navlink" key={link.name} to={`${link.to}`}>
+                        {link.name}
+                    </NavLink>
+                ))}
+                {/*<Link href="#"> Home </Link>
                 <Link href="#"> Sobre </Link>
                 <Link href="#"> Categorias </Link>
-                <Link href="#"> Contato </Link>
+                <Link href="#"> Contato </Link>*/}
             </Navbar>
             <Search>
                 <Input placeholder="Buscar" />
